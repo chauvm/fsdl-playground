@@ -90,3 +90,13 @@ class BaseDataModule(pl.LightningDataModule):
         return random_split(  # type: ignore
             base_dataset, [split_a_size, split_b_size], generator=Generator().manual_seed(seed)
         )
+
+    @staticmethod
+    def add_to_argparse(parser):
+        parser.add_argument(
+            "--batch_size", type=int, default=BATCH_SIZE, help="Number of examples to operate on per forward step."
+        )
+        parser.add_argument(
+            "--num_workers", type=int, default=NUM_WORKERS, help="Number of additional processes to load data."
+        )
+        return parser
