@@ -5,3 +5,9 @@ torch==1.7.1    #+cu110 not found
 torchvision==0.8.2    #+cu110 not found
 torchaudio==0.7.2
 torchtext==0.8.1
+matplotlib
+flake8
+h5py
+tqdm
+toml
+scipy
