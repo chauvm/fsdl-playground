@@ -38,7 +38,7 @@ def _setup_parser():
 
     # Get the data and model classes, so that we can add their specific arguments
     temp_args, _ = parser.parse_known_args()
-    data_class = _import_class(f"text_recognizer.data.{temp_args.data_class}")
+    data_class = _import_class(f"text_recognizer.emnist_data.{temp_args.data_class}")
     model_class = _import_class(f"text_recognizer.models.{temp_args.model_class}")
 
     # Get data, model, and LitModel specific arguments
@@ -66,7 +66,7 @@ def main():
     """
     parser = _setup_parser()
     args = parser.parse_args()
-    data_class = _import_class(f"text_recognizer.data.{args.data_class}")
+    data_class = _import_class(f"text_recognizer.emnist_data.{args.data_class}")
     model_class = _import_class(f"text_recognizer.models.{args.model_class}")
     data = data_class(args)
     model = model_class(data_config=data.config(), args=args)

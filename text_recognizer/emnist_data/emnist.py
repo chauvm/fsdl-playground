@@ -8,9 +8,9 @@ import toml
 import numpy as np
 from torchvision import transforms
 
-from emnist_data.base_dataset import BaseDataset
-from emnist_data.base_data_module import BaseDataModule
-from emnist_data.util import _download_raw_dataset, _sample_to_balance, _augment_emnist_characters
+from .base_dataset import BaseDataset
+from .base_data_module import BaseDataModule
+from .util import _download_raw_dataset, _sample_to_balance, _augment_emnist_characters
 
 # ESSENTIAL_CHARACTERS = ["<B>", "<S>", "<E>", "<P>", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "!", "\"", "#", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "?"]
 NUM_SPECIAL_TOKENS = 4

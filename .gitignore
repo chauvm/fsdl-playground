@@ -1,4 +1,4 @@
-data/downloaded/*
-data/processed/*
+text_recognizer/data/downloaded/*
+text_recognizer/data/processed/*
 **/lightning_logs
 **/__pycache__

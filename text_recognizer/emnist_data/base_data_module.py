@@ -5,7 +5,7 @@ import pytorch_lightning as pl
 from torch.utils.data import ConcatDataset, DataLoader, random_split
 from torch import Generator
 
-from emnist_data.base_dataset import BaseDataset
+from .base_dataset import BaseDataset
 
 BATCH_SIZE = 128
 NUM_WORKERS = 0
