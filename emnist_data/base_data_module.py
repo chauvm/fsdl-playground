@@ -35,7 +35,11 @@ class BaseDataModule(pl.LightningDataModule):
     @classmethod
     def data_dirname(cls):
         return Path(__file__).resolve().parents[1] / "data"
-    
+
+    def config(self):
+        """Return important settings of the dataset, which will be passed to instantiate models."""
+        return {"input_dims": self.dims, "output_dims": self.output_dims, "mapping": self.mapping}
+        
     def prepare_data(self):
         """
         Use this method to do things that might write to disk or that need to be done only from a single GPU

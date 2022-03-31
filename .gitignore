@@ -1,2 +1,4 @@
 data/downloaded/*
 data/processed/*
+**/lightning_logs
+**/__pycache__
